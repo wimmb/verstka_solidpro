@@ -172,16 +172,18 @@ document.addEventListener('DOMContentLoaded', function () {
 		header.addEventListener('click', function () {
 			if (content.style.maxHeight) {
 				content.style.maxHeight = null;
-				content.style.paddingTop = null;
+				content.style.paddingBottom = null;
 				content.style.marginTop = null;
 				button.classList.remove('v_active');
 				content.classList.remove('c_active');
+				block.classList.remove('t_active');
 			} else {
 				content.style.maxHeight = content.scrollHeight + 30 + 'px';
-				content.style.paddingTop = '15px';
-				content.style.marginTop = '15px';
+				content.style.paddingBottom = '20px';
+				content.style.marginTop = '20px';
 				button.classList.add('v_active');
 				content.classList.add('c_active');
+				block.classList.add('t_active');
 			}
 		});
 	});

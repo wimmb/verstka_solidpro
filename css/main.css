@@ -967,15 +967,114 @@ tr, td {
 
 .contacts-sect {}
 
+.contacts__content {
+	display: flex;
+	gap: 20px;
+}
 
+.contacts__col {
+	flex: 0 1 calc(100%/2 - 10px);
+}
 
-.faq-sect {}
+.contacts__form-wrap {
+	position: relative;
+	background-color: var(--opacity-bg);
+	padding: 18px 20px 20px;
+	border-radius: 20px;
+	border: 1px solid var(--white-color);
+	overflow: hidden;
+}
 
+.contacts__map {
+	position: relative;
+	background-color: var(--light-color);
+	line-height: 0;
+	border-radius: 20px;
+	overflow: hidden;
+	height: 100%;
+}
 
+.faq-sect {
+	padding-bottom: 80px;
+}
 
+.faq__toggles {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
 
+.faq__toggle {
+	background-color: transparent;
+	border-radius: 20px;
+	border: 1px solid transparent;
+	padding: 18px 20px 0;
+	transition: all 0.3s ease;
+	overflow: hidden;
+}
 
+.faq__toggle.t_active {
+	background-color: var(--opacity-bg);
+	border-color: var(--white-color);
+}
 
+.toggle__header {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	gap: 20px;
+	cursor: pointer;
+	padding-bottom: 20px;
+	border-bottom: 1px solid var(--white-color);
+}
+
+.toggle__header-title {
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 1.2;
+	color: var(--white-color);
+}
+
+.toggle__header-btn {
+	flex-grow: 0;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 18px;
+	border: 2px solid var(--white-color);
+	line-height: 0;
+	font-size: 16px;
+	color: var(--white-color);
+	text-align: center;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.toggle__header:hover .toggle__header-btn {
+	border-color: var(--light-color);
+	color: var(--light-color);
+}
+
+.toggle__header-btn.v_active {
+	transform: rotateZ(180deg);
+}
+
+.toggle__content {
+	max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+	font-size: 20px;
+}
+
+.faq__buttons {
+	margin-top: 40px;
+	text-align: center;
+}
 
 /*-------------------------------------------*/
 /*------------------MEDIA--------------------*/
@@ -1006,6 +1105,17 @@ tr, td {
 	}
 	.cta__man {
 		right: -15px;
+	}
+	.toggle__header-title {
+		font-size: 26px;
+	}
+	.toggle__content {
+		font-size: 18px;
+	}
+	.toggle__header-btn {
+		width: 32px;
+		height: 32px;
+		font-size: 13px;
 	}
 }
 
@@ -1057,8 +1167,17 @@ tr, td {
 	.sheader__title {
 		font-size: 30px;
 	}
+	.toggle__content,
 	.sheader__desc {
 		font-size: 16px;
+	}
+	.toggle__header-title {
+		font-size: 22px;
+	}
+	.toggle__header-btn {
+		width: 26px;
+		height: 26px;
+		font-size: 11px;
 	}
 }
 
@@ -1069,7 +1188,9 @@ tr, td {
 	.hero__title {
 		font-size: 38px;
 	}
-	
+	.faq__toggle {
+		padding: 17px 12px 0;
+	}
 }
 
 @media only screen and (max-width: 479.98px) {

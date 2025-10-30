@@ -64,7 +64,7 @@ $(document).ready(function () {
 	}
 
 	// Reviews carousel swiper
-	/*const reviews__carousel = document.querySelector('.reviews__carousel');
+	const reviews__carousel = document.querySelector('.reviews__carousel');
 	if (reviews__carousel) {
 		const swiper = new Swiper(reviews__carousel, {
 			slidesPerView: 'auto',
@@ -78,7 +78,7 @@ $(document).ready(function () {
       			prevEl: '.reviews__btn-prev',
     		},
 		});
-	}*/
+	}
 
 });
 

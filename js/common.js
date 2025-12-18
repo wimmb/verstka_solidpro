@@ -51,7 +51,6 @@ $(document).ready(function () {
 	if (logos__carousel) {
 		const swiper = new Swiper(logos__carousel, {
 			slidesPerView: 'auto',
-			allowTouchMove: false,
 			spaceBetween: 70,
 			loop: true,
 			speed: 2200,
@@ -63,12 +62,53 @@ $(document).ready(function () {
 		});
 	}
 
+	// Services carousel swiper
+	const servicesCarousels = document.querySelectorAll('.services__carousel');
+	if (servicesCarousels.length) {
+		servicesCarousels.forEach((carousel) => {
+			new Swiper(carousel, {
+				slidesPerView: 'auto',
+				allowTouchMove: false,
+				spaceBetween: 20,
+				loop: true,
+				speed: 1000,
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+			});
+		});
+	}
+
+	// Gallery carousel swiper
+	const gallery__carousel = document.querySelector('.gallery__carousel');
+	if (gallery__carousel) {
+		const swiper = new Swiper(gallery__carousel, {
+			slidesPerView: 'auto',
+			allowTouchMove: false,
+			spaceBetween: 20,
+			loop: true,
+			speed: 1000,
+      		pagination: {
+      			el: '.gallery__pagination',
+      			clickable: true,
+    		},
+			navigation: {
+      			nextEl: '.gallery__btn-next',
+      			prevEl: '.gallery__btn-prev',
+    		},
+		});
+	}
+
 	// Reviews carousel swiper
 	const reviews__carousel = document.querySelector('.reviews__carousel');
 	if (reviews__carousel) {
 		const swiper = new Swiper(reviews__carousel, {
 			slidesPerView: 'auto',
+			allowTouchMove: false,
 			loop: true,
+			speed: 1000,
+			autoplay: true,
       		pagination: {
       			el: '.reviews__pagination',
       			clickable: true,
@@ -154,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Toggles FAQ
 document.addEventListener('DOMContentLoaded', function () {
-	const toggleBlocks = document.querySelectorAll('.faq__toggle');
+	const toggleBlocks = document.querySelectorAll('.block__toggle');
 
 	if (toggleBlocks.length === 0) {
 		return;

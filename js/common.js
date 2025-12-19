@@ -190,10 +190,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 });
 
-
-//------------------------------------------ other
-
-// Toggles FAQ
+// Toggles
 document.addEventListener('DOMContentLoaded', function () {
 	const toggleBlocks = document.querySelectorAll('.block__toggle');
 

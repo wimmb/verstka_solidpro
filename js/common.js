@@ -51,6 +51,7 @@ $(document).ready(function () {
 	if (logos__carousel) {
 		const swiper = new Swiper(logos__carousel, {
 			slidesPerView: 'auto',
+			allowTouchMove: false,
 			spaceBetween: 70,
 			loop: true,
 			speed: 2200,
